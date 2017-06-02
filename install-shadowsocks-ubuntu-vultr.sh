@@ -20,8 +20,8 @@ apt-get update
 apt-get -y install docker-ce
 
 # Start Docker
-systemctl start docker
-systemctl enable docker
+# systemctl start docker
+# systemctl enable docker
 
 # Get docker-compose
 curl -L https://github.com/docker/compose/releases/download/1.13.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
