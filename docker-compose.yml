@@ -5,5 +5,5 @@ ss-server:
     - "8388:8388/udp"
   environment:
     - METHOD=aes-256-cfb
-    - PASSWORD=YnK46c7q
+    - PASSWORD=qlbfwlxp
   restart: always
