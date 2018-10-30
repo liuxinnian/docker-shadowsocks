@@ -24,14 +24,5 @@ apt-get -y install docker-ce
 systemctl start docker
 systemctl enable docker
 
-# Get docker-compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
-
-# Get config file
-mkdir ~/docker-shadowsocks
-curl -L https://raw.githubusercontent.com/liuxinnian/docker-shadowsocks/master/docker-compose.yml > ~/docker-shadowsocks/docker-compose.yml
-
-# Pull & Start shadowsocks Server
-cd ~/docker-shadowsocks
-docker-compose up -d
+# Run Container
+docker run --restart=always --name shadowsocks-libev -e PASSWORD=qlbfwlxp -p8388:8388 -p8388:8388/udp -d shadowsocks/shadowsocks-libev 
